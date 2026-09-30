@@ -17,10 +17,10 @@ Given student demand at multiple pickup stops and destination schools, construct
 
 The weighted objective used throughout the project is:
 
-$$ \min\; w_b \cdot \text{buses}
+$$\min w_b \cdot \text{buses}
 + w_t \cdot \text{travel time}
 + w_r \cdot \text{in-vehicle time}
-+ w_f \cdot \text{fairness penalty} $$
++ w_f \cdot \text{fairness penalty}$$
 
 This formulation makes the central research question explicit: **how much efficiency should be traded for a fairer distribution of student travel burden?**
 
@@ -58,6 +58,30 @@ The figure above summarizes the 9/20/35 groups experiments. It is intended as an
 | Genetic Algorithm | Population-based search | `ga_solver.py` |
 | Ant Colony Optimization | Pheromone-guided constructive search | `aco_solver.py` |
 | Greedy construction | Fast baseline and initial solution | `greedy_solver.py` |
+
+## Quick Start
+
+```bash
+git clone https://github.com/excellent77/SBRP_algorithms.git
+cd SBRP_algorithms
+pip install -r requirements.txt
+```
+
+Gurobi-based methods require a working Gurobi installation and license. A free academic license is available for eligible users.
+
+Place the input files in `./data/`, then run a solver directly:
+
+```bash
+python greedy_solver.py
+python lns_solver.py
+python ga_solver.py
+python aco_solver.py
+python exact_solver.py
+python dantzig-wolfe_solver.py
+python dantzig+lns_solver.py
+```
+
+The example instance paths and algorithm parameters are defined in each script's `if __name__ == "__main__":` block.
 
 ## Data Format
 
