@@ -17,10 +17,7 @@ Given student demand at multiple pickup stops and destination schools, construct
 
 The weighted objective used throughout the project is:
 
-$$\min w_b \cdot \text{buses}
-+ w_t \cdot \text{travel time}
-+ w_r \cdot \text{in-vehicle time}
-+ w_f \cdot \text{fairness penalty}$$
+$$\min w_b \cdot \text{buses} + w_t \cdot \text{travel time} + w_r \cdot \text{in-vehicle time} + w_f \cdot \text{fairness penalty}$$
 
 This formulation makes the central research question explicit: **how much efficiency should be traded for a fairer distribution of student travel burden?**
 
